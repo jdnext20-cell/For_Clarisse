@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Touch of Eternity | Jean d'Amour & Clarisse</title>
+    <style>
+        :root {
+            --primary: #ff4b72;
+            --secondary: #ff85a2;
+            --bg-dark: #0f051d;
+            --card-bg: rgba(25f, 15, 35, 0.75);
+            --gold: #ffd700;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: radial-gradient(circle at center, #2a0845, #0f051d);
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 650px;
+            width: 100%;
+            background: var(--card-bg);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            position: relative;
+        }
+
+        h1 {
+            color: var(--gold);
+            font-size: 1.8rem;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .subtitle {
+            color: var(--secondary);
+            font-style: italic;
+            margin-bottom: 25px;
+        }
+
+        .envelope-btn {
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(255, 75, 114, 0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-bottom: 20px;
+        }
+
+        .envelope-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(255, 75, 114, 0.6);
+        }
+
+        .content {
+            display: none;
+            text-align: left;
+            animation: fadeIn 1.5s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .letter {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #f0f0f0;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary);
+            margin-bottom: 25px;
+        }
+
+        .name-box {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            border-radius: 12px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        .name-title {
+            color: var(--gold);
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .meaning {
+            color: #e0e0e0;
+            font-size: 0.95rem;
+        }
+
+        .signature {
+            text-align: right;
+            margin-top: 20px;
+            font-style: italic;
+            color: var(--secondary);
+            font-weight: bold;
+        }
+
+        .footer-buttons {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .wa-btn {
+            background: #25d366;
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+
+        .wa-btn:hover {
+            background: #1ebc57;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>🌹 A Touch of Eternity 🌹</h1>
+        <p class="subtitle">A special space for Clarisse</p>
+
+        <button class="envelope-btn" onclick="openSurprise()">💌 Kanda Hano Ufungure Surprise</button>
+
+        <div class="content" id="surpriseContent">
+            <div class="letter">
+                <p><strong>My Beloved Clarisse,</strong></p>
+                <br>
+                <p>In my quiet contemplation of our bond, I blended our names—<strong>Jean d'Amour</strong> and <strong>Clarisse</strong>—to craft two timeless monikers tailored uniquely for us:</p>
+                
+                <div class="name-box">
+                    <div class="name-title">✨ Jalisse</div>
+                    <div class="meaning"><em>(Jean d'Amour + Clarisse)</em></div>
+                    <div class="meaning"><strong>Insobanuro:</strong> Imitima ibiri yihariye yishyize hamwe ikaba umwe udashobora gutanyuka.</div>
+                </div>
+
+                <div class="name-box">
+                    <div class="name-title">✨ Clamour</div>
+                    <div class="meaning"><em>(Clarisse + Jean d'Amour)</em></div>
+                    <div class="meaning"><strong>Insobanuro:</strong> Urumuri rwawe ruhebuje ruvanze n'uburemere bw'urukundo rwanjye rw'akadasohoka.</div>
+                </div>
+
+                <p>They stand as a testament to the light you bring into my life and the profound love we share. I cannot wait to hear which one steals your heart.</p>
+
+                <div class="signature">— Devotedly, Jean d'Amour</div>
+            </div>
+
+            <div class="footer-buttons">
+                <a class="wa-btn" href="https://wa.me/?text=Nabyimukiye!%20Izina%20nkunze%20cyane%20ni..." target="_blank">📱 Subiza Jean d'Amour kuri WhatsApp</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openSurprise() {
+            document.querySelector('.envelope-btn').style.display = 'none';
+            document.getElementById('surpriseContent').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

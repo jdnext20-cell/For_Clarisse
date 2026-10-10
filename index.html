@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -59,6 +60,31 @@
             margin-bottom: 25px;
         }
 
+        /* Music Player Box */
+        .music-box {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--secondary);
+            border-radius: 15px;
+            padding: 15px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .music-title {
+            font-size: 0.95rem;
+            color: var(--gold);
+            font-weight: bold;
+        }
+
+        audio {
+            width: 100%;
+            height: 35px;
+            outline: none;
+        }
+
         .envelope-btn {
             background: linear-gradient(45deg, var(--primary), var(--secondary));
             color: white;
@@ -71,10 +97,11 @@
             box-shadow: 0 5px 15px rgba(255, 75, 114, 0.4);
             transition: transform 0.2s, box-shadow 0.2s;
             margin-bottom: 20px;
+            width: 100%;
         }
 
         .envelope-btn:hover {
-            transform: scale(1.05);
+            transform: scale(1.02);
             box-shadow: 0 8px 25px rgba(255, 75, 114, 0.6);
         }
 
@@ -158,6 +185,16 @@
         <h1>🌹 A Touch of Eternity 🌹</h1>
         <p class="subtitle">A special space for Clarisse</p>
 
+        <!-- Player y'Indirimbo -->
+        <div class="music-box">
+            <div class="music-title">🎵 Indirimbo y'Urukundo</div>
+            <!-- Ushobora guhindura iyi link ya MP3 ukashyiramo indirimbo wifuza -->
+            <audio id="bgMusic" controls autoplay loop>
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                Browser yawe ntiyemera gucuranga audio.
+            </audio>
+        </div>
+
         <button class="envelope-btn" onclick="openSurprise()">💌 Kanda Hano Ufungure Surprise</button>
 
         <div class="content" id="surpriseContent">
@@ -168,7 +205,7 @@
                 
                 <div class="name-box">
                     <div class="name-title">✨ Jalisse</div>
-                    <div class="meaning"><em>(Jean d me+ Clarisse)</em></div>
+                    <div class="meaning"><em>(Jean d'Amour + Clarisse)</em></div>
                     <div class="meaning"><strong>Insobanuro:</strong> Imitima ibiri yihariye yishyize hamwe ikaba umwe udashobora gutanyuka.</div>
                 </div>
 
@@ -193,9 +230,15 @@
         function openSurprise() {
             document.querySelector('.envelope-btn').style.display = 'none';
             document.getElementById('surpriseContent').style.display = 'block';
+            
+            // Tangira gucuranga indirimbo iyo akande kuri bouton
+            var audio = document.getElementById('bgMusic');
+            if (audio) {
+                audio.play();
+            }
         }
     </script>
 </body>
-            </html>
+</html>
 
             
